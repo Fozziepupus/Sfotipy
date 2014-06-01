@@ -1,2 +1,38 @@
-h1
-	color green
+@import 'normalize.styl'
+
+gris_obscuro = #333333
+gris_claro = #818181
+
+body
+	font-size 16px
+
+figure
+	margin 0
+
+.container
+	font-size 0// PARA ELIMINAR EL INTERLETRADO
+	padding 1.4rem
+	text-align center
+
+.name
+	color gris_obscuro
+
+.autor
+	color gris_claro
+
+.song
+	border solid .5px red
+	width 8rem//DE EM SE CAMBIA A REM PORQ AL ELIMINAR EL INTERLETRADO EM NO TIENE DE DONDE TOMAR EL TAMAÑO AL NO EXISTIR TEXTO, Y LO TOMA DEL BODY CON REM
+	display inline-block
+	font-size 1rem
+	margin-right 1em
+	margin-bottom 1em
+	text-align left
+	&:nth-child(even)
+		margin-right 0
+	p
+		margin .5em 0 //top-bottom, right-left
+		//LAS SIGUIENTES 3 LINEAS COLOCAN PUNTOS SUSPENSIVOS AL TEXTO QUE SE DESBORDA DEL ARTICLE, EN EL CASO DE LA ROLA DE JAKE BUGG
+		white-space nowrap
+		text-overflow ellipsis
+		overflow hidden
