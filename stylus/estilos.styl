@@ -1,13 +1,33 @@
+//@import 'normalize.styl'
+@import url(http://fonts.googleapis.com/css?family=Varela\+Round)
+//@import url(http://fonts.googleapis.com/css?family=Ubuntu)
 @import 'normalize.styl'
 
 gris_obscuro = #333333
 gris_claro = #818181
 
+a
+	text-decoration none
+
 body
+	font-family 'Varela Round', sans-serif
+	//font-family 'Ubuntu'//NO ME FUNCIONA NINGUNA FUENTE IMPORTADA DESDE *.STYL
 	font-size 16px
 
 figure
 	margin 0
+
+.border
+	
+
+.button-menu
+	left .5em
+	position absolute//PONE A VOLAR EL ELEMENTO, Y LO COLOCA REFERENTE AL PADRE MÁS CERCANO Q TENGA position RELATIVE
+	top 50%
+	margin-top -10px
+
+.border-bottom
+	border-bottom 1px solid gris_claro
 
 .container
 	font-size 0// PARA ELIMINAR EL INTERLETRADO
@@ -17,11 +37,28 @@ figure
 .name
 	color gris_obscuro
 
+.menu
+	display none
+
 .autor
 	color gris_claro
 
+.relative//CLASE UTILITARÍA Q SE PUEDE AGREGAR A LOS ELELEMTOS Q QUERAMOS SEAN RELATIVE, EMPLEADO OOCSS, EVITANDO PONERLO EN EL .HEADER
+	position relative
+
+.header
+	height 3.5em
+	//position relative/*ESTE POSITION RELATIVE PARA Q LO TOME DE REFERENCIA EL ABSOLUTE DE .BUTTON-MENU SE PUEDE HACER CON CLASES UTILITARIAS AL HACER OOCSS Y AGREGARLAS A LOS ELEMENTOS*/
+	/*a
+		display none*/
+	.title
+		font-size 1.1em
+		text-align center
+		margin 0
+		line-height 3.5em //MISMO ALTO QUE EL DEL HEADER
+
 .song
-	border solid .5px red
+	/*border solid .5px red*/
 	width 8rem//DE EM SE CAMBIA A REM PORQ AL ELIMINAR EL INTERLETRADO EM NO TIENE DE DONDE TOMAR EL TAMAÑO AL NO EXISTIR TEXTO, Y LO TOMA DEL BODY CON REM
 	display inline-block
 	font-size 1rem
